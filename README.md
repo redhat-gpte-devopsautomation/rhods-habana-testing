@@ -1,4 +1,4 @@
-# rhods-gpu-testing
+# rhods-habana-hpu-testing
 <p>This is a repository providing sample code to test and verify that HPU's are available for your environment and also to run a small tensor based / CUDA based python program on GPUs.</p>
 <p>Once you clone this repo on jypyterhub notebook after starting it on RHODS's environment using habana based image, run the notebook `quickstart_tutorial.ipynb` provided in this repo to test and verify HPU's.</p>
 
