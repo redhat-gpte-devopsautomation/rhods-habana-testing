@@ -1,6 +1,6 @@
 # rhods-gpu-testing
-<p>This is a repository providing sample code to test and verify that GPU's are available for your environment and also to run a small tensor based / CUDA based python program on GPUs.</p>
-<p>Once you clone this repo on jypyterhub notebook after starting it on RHODS's environment using tensorflow based image, run the notebook `gpu-testing.ipynb` provided in this repo to test and verify GPU's.</p>
+<p>This is a repository providing sample code to test and verify that HPU's are available for your environment and also to run a small tensor based / CUDA based python program on GPUs.</p>
+<p>Once you clone this repo on jypyterhub notebook after starting it on RHODS's environment using habana based image, run the notebook `gpu-testing.ipynb` provided in this repo to test and verify GPU's.</p>
 
 
 <p>Additonally, if you want you can download this git repo to have customized cuda based image to be used in RHODS and maybe also run some ML workloads.</p>
