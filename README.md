@@ -2,27 +2,7 @@
 <p>This is a repository providing sample code to test and verify that HPU's are available for your environment and also to run a small tensor based / CUDA based python program on GPUs.</p>
 <p>Once you clone this repo on jypyterhub notebook after starting it on RHODS's environment using habana based image, run the notebook `quickstart_tutorial.ipynb` provided in this repo to test and verify HPU's.</p>
 
-<p>If RHODS version is < 1.34, you need to manually add HPU resource to the jupyterhub notebook instance.</p>
-<p>Once you start the jupyterhub notebook (habana) from RHODS dashboard go and update the resource for this instance from OCP UI / API Explorer.</p>
-<p> Note: If you do not see the habana based notebook in RHODS Dashboard, you can add it manually in RHODS by selecting RHODS settings, Notebook Images, import image and use this repo link for habana 1.10 based image. <a href="quay.io/opendatahub/workbench-images:habana-jupyter-1.10.0-ubi8-python-3.8-2023b-20231024-34c3405" target="_blank">Habana Jupyterhub Notebook Image</a></p>
-  
-<p>Search for notebook in API Explorer (1st one will be with v1 api, select that). This will lead you to jypyterhub notebook instance (you need to select instance to get to the habana jupyerhub notebook instance). There will be two containers, select the container with more resources and add habana gpu's as shown below and save the instance.</p>
-<yaml>
-spec:
-  template:
-   spec:
-:
-:
-     containers:
-     - resources:
-       limits:
-         cpu: '2'
-         habana.ai/gaudi: '1' # Add this line
-         memory: 8Gi
-       requests:
-         cpu: '1'
-         habana.ai/gaudi: '1' # Add this line
-         memory: 8Gi
-</yaml>
+<p>If RHODS version is < 1.34, you need to manually add HPU resource to the jupyterhub notebook instance.</p>  
+<p>Follow this document if you are using RHODS < 1.33 to set habana hpu's in the notebook instance. <a href="https://docs.google.com/document/d/1v64_nI5zSiFM4PtinXhbfmow2-fJ2guLf-2AbL-lnNM/edit?usp=sharing" target="_blank">Habana Jupyterhub Notebook Instance resource setting for Habana GPUS - For RHODS 1.33 and less </a></p>
 
 <p> Once the instance is saved and reloaded, you can restart your jupyterhub notebook on RHODS dashboard and that should give you access to HPU's when you run your test notebook. Note that this procedure will be obsolete with the release of RHODS 1.34 onwards </p>
