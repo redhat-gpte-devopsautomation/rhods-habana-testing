@@ -4,7 +4,7 @@
 
 <p>If RHODS version is < 1.34, you need to manually add HPU resource to the jupyterhub notebook instance.</p>
 <p>Once you start the jupyterhub notebook (habana) from RHODS dashboard go and update the resource for this instance from OCP UI / API Explorer.</p>
-<p> Note: If you do not see the habana based notebook in RHODS Dashboard, you can add it manually in RHODS by selecting RHODS settings, Notebook Images, import image and use this repo link for habana 1.10 based image. <a>href: "quay.io/opendatahub/workbench-images:habana-jupyter-1.10.0-ubi8-python-3.8-2023b-20231024-34c3405"</a></p>
+<p> Note: If you do not see the habana based notebook in RHODS Dashboard, you can add it manually in RHODS by selecting RHODS settings, Notebook Images, import image and use this repo link for habana 1.10 based image. <a href="quay.io/opendatahub/workbench-images:habana-jupyter-1.10.0-ubi8-python-3.8-2023b-20231024-34c3405" target="_blank">Habana Jupyterhub Notebook Image</a></p>
   
 <p>Search for notebook in API Explorer (1st one will be with v1 api, select that). This will lead you to jypyterhub notebook instance (you need to select instance to get to the habana jupyerhub notebook instance). There will be two containers, select the container with more resources and add habana gpu's as shown below and save the instance.</p>
 <yaml>
